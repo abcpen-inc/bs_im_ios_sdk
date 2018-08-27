@@ -14,6 +14,12 @@
 @interface ABCConversationViewController : ABCChatViewController
 
 @property(nonatomic,strong,getter=getTextView) UITextView *inputTextView;
+
+@property(nonatomic,strong) NSString *placeHolder;
+
+@property(nonatomic,strong) UIColor *placeHolderColer;
+
+
 /*!
  初始化会话页面
  
