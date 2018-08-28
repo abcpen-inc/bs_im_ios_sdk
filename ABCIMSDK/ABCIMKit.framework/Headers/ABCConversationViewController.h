@@ -11,7 +11,21 @@
 #import <ABCIMKit/ABCPluginBoardView.h>
 #import "ABCBaseMessageCell.h"
 
-@interface ABCConversationViewController : ABCChatViewController
+@protocol ABCMessageSendStaus<NSObject>
+
+/*
+ 发送消息成功，包含所有消息
+ */
+-(void) sendMessageSuccess;
+/*
+ 发送消息失败，包含所有消息
+ */
+-(void) sendMessageFail;
+
+@end
+
+
+@interface ABCConversationViewController : ABCChatViewController<ABCMessageSendStaus>
 
 @property(nonatomic,strong,getter=getTextView) UITextView *inputTextView;
 
@@ -52,6 +66,20 @@
 - (void)loadMessages;
 
 #pragma mark - 消息操作
+/*!
+ 添加本地消息
+ 
+ @param messageContent 消息的内容
+ */
+- (void)addMessage:(ABCMessageContent *)messageContent;
+
+/*!
+ 添加本地消息
+ 
+ @param messageContent 消息的内容
+ @param sentStatus 状态
+ */
+- (void)addMessage:(ABCMessageContent *)messageContent sentStatus:(ABCSentStatus) sentStatus;
 
 #pragma mark 发送消息
 /*!
