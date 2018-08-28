@@ -30,6 +30,8 @@
  */
 - (id)initWithConversationType:(ABCConversationType)conversationType targetId:(NSString *)targetId;
 
+@property (nonatomic, strong) NSMutableArray *messageArray;
+
 #pragma mark - 会话属性
 @property (nonatomic, strong) ABCMessage *selectMessage;
 @property (nonatomic, strong) ABCPluginBoardView *pluginBoardView;
