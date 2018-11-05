@@ -31,6 +31,9 @@
 @property (nonatomic, strong) UIImage *avatarImage;
 @property (nonatomic, strong) NSString *avatarUrl;
 @property (nonatomic, strong) NSString *nickName;
+@property (nonatomic, copy) NSString *roleName;
+@property (nonatomic, assign) BOOL isShowRole;//默认不显示
+@property (nonatomic, assign) CGRect roleLabelFrame;
 
 @property (nonatomic, strong) UIImage *bubbleImage;
 @property (nonatomic, strong) UIImage *highlightBubbleImage;
@@ -40,6 +43,7 @@
 
 - (instancetype)initWithChatItem:(id<ABCChatItem>)chatItem cellWidth:(CGFloat)width;
 - (void)calculateLayout;
+- (void)groupMasterID:(NSString *)masterID orAssistantID:(NSString *)assistantID;
 
 @end
 

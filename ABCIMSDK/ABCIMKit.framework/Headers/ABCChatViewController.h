@@ -37,6 +37,16 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property(nonatomic) BOOL displayUserNameInCell;
 
+/*
+ * 课堂助手ID
+ */
+@property(nonatomic, copy) NSString *assistantID;
+
+/*
+ * 群主ID
+ */
+@property(nonatomic, copy) NSString *masterID;
+
 //
 // Pay more attention to inverted mode with layouts,
 // as you see on collectionView:

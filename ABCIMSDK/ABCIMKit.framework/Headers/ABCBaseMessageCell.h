@@ -16,6 +16,7 @@
 @property (nonatomic, strong) UIImageView *avatarImageView;
 @property (nonatomic, strong) UIButton *sentStatusView;
 @property (nonatomic, strong) UILabel *labNickName;
+@property (nonatomic, strong) UILabel *labRole;
 
 @property (nonatomic, strong) ABCMessage *message;
 @property (nonatomic, assign, getter=isHighlight) BOOL hightlight;
