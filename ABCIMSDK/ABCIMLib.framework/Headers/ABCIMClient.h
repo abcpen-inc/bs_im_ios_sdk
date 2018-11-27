@@ -230,6 +230,16 @@
 - (void)updateABCMessage:(ABCMessage *) message;
 
 /*!
+ 根据uuid更新本地消息内容数据
+ @param message    ABCMessage
+ @param persistentFlag ABCMessagePersistent
+ 
+ @discussion 可设置媒体消息中文件信息是否已读，或者其它类型消息的ABCMessageContent
+ 勿修改ABCMessage 中其它属性，以免造成数据混乱
+ */
+-(void) updateMessage:(ABCMessage *) message persistentFlag:(ABCMessagePersistent) persistentFlag;
+
+/*!
  插入向外发送的消息
  
  @param conversationType    会话类型
