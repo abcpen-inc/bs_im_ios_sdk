@@ -526,6 +526,13 @@
 - (int)getUnreadCount:(NSArray *)conversationTypes;
 
 /*!
+ 获取所有会话中未读消息数（不包含没有创建的会话列表的message）
+ 
+ @return                    该类型的会话中所有的未读消息数
+ */
+- (int)getConversationUnreadCount;
+
+/*!
  清除某个会话中的未读消息数
  
  @param conversationType    会话类型
