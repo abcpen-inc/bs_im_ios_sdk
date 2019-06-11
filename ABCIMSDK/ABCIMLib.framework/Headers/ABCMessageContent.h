@@ -94,6 +94,12 @@
  */
 -(BOOL) isCreateConversion;
 
+/*!
+ 是否更新会话列表的时间戳
+ @discussion 默认YES,NO会影响会话列表排序
+ */
+-(BOOL) isChangeConversationTimestamp;
+
 @end
 
 @interface ABCMessageContent : NSObject<ABCMessageCoding,ABCMessagePersistentCompatible,ABCMessageContentView,ABCMessageConversationCompatible>

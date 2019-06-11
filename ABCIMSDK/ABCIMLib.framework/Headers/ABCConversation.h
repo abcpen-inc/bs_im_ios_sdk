@@ -29,11 +29,15 @@
  */
 @property(nonatomic, strong) NSString *lastSenderUserId;
 
-
 /*!
  会话中最后一条消息的内容
  */
 @property(nonatomic, strong) ABCMessageContent *lastestMessage;
+
+/*!
+ 最后一条消息的发送状态
+ */
+@property(nonatomic, assign) ABCSentStatus lastSentStatus;
 
 /*!
  会话中最后一条消息的类型名

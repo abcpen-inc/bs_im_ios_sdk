@@ -343,6 +343,16 @@
 - (ABCConversation *)getConversation:(ABCConversationType)conversationType targetId:(NSString *)targetId;
 
 /*!
+ 获取单个消息数据
+ 
+ @param conversationType    会话类型
+ @param messageId           消息ID
+ @return                    消息实体ABCMessage
+ */
+- (ABCMessage *)getMessage:(ABCConversationType)conversationType messageId:(int) messageId;
+
+
+/*!
  获取会话中所有消息
  
  @param conversationType    会话类型
