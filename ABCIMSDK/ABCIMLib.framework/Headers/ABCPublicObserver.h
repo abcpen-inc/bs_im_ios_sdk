@@ -42,6 +42,14 @@
  @param message     当前接收到的消息
  */
 - (void)onReceivedMessage:(ABCMessage *)message;
+    
+/*!
+ 消息发送失败回调
+ @param msgLocalID     当前消息本地id
+ @param targetId       当前会话id
+ */
+- (void)onReceivedMessageFailure:(int)msgLocalID targetId:(NSString *)targetId;
+
 @end
 
 /*!
