@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   # s.source           = { :git => 'git@git.abcpen.com:pod_group/ABCIM-Pod.git'}
   s.platform         = :ios, '9.0'
   s.requires_arc     = true
-  s.pod_target_xcconfig = { 'VALID_ARCHS' => 'arm64 armv7' }
+  s.pod_target_xcconfig = { 'VALID_ARCHS' => 'armv7'}
 
   s.subspec 'ABCIMLib' do |sp|
     sp.public_header_files = 'ABCIMSDK/ABCIMLib.framework/Headers/ABCIMLib.h'
